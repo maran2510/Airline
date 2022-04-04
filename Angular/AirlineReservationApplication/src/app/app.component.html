@@ -1,0 +1,53 @@
+<!-- HEADER -->
+
+<nav class="navbar navbar-expand-lg navbar-light background-color" style="background-color: hsl(186, 85%, 74%);">
+    <img src="./assets/logoss.jpg" alt="flight logo" class="logo" />
+    <ul class="navbar-nav">
+
+        <li class="nav-item active">
+            <a class="nav-link" routerLink="homepage"><b>Home</b></a>
+        </li>
+
+        <li class="nav-item active">
+            <a class="nav-link" routerLink="about"><b>About</b></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" routerLink="faq"><b>FAQ</b></a>
+
+        </li>
+
+        <li class="nav-right">
+
+            <a href="passengerlogin" class="nav-link"><b>User Login</b></a>
+
+        </li>
+        <li class="nav-right">
+
+            <a href="admlogin" class="nav-link"><b>Admin Login</b></a>
+
+        </li>
+
+
+
+    </ul>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+<!-- HEADER -->
+
+<div class="image">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER -->
+
+<div class="myfooter">
+    <p>@ All Rights Reserved LTI Airline System</p>
+</div>

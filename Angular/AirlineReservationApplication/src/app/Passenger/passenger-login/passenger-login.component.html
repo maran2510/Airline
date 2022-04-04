@@ -1,0 +1,130 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="wrapper">
+        <div class="row">
+            <div class="card col-md-5 offset-md-7 shadow-lg p-3 mb-5 bg-white">
+                <h3 style="margin-top: 20px;">User Login</h3>
+                <div class="row">
+                    <div class="form-group">
+                        <label for="Username">Username:</label>
+                        <input class="form-control" formControlName="Username" id="Username">
+                        <div *ngIf="submitted && loginForm.controls.Username.errors" class="error">
+                            <div class="text-danger" *ngIf="loginForm.controls.Username.errors.required">Username is required</div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="Password">Password:</label>
+                        <input class="form-control" formControlName="Password" id="Password">
+                        <div *ngIf="submitted && loginForm.controls.Password.errors" class="error">
+                            <div class="text-danger" *ngIf="loginForm.controls.Password.errors.required">Password is required</div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <button class="logInBtn btn btn-primary">Login</button>
+                    <button class="logInBtn btn btn-danger" type="reset">Cancel</button>
+                    <a routerLink="/addpassenger" class="forgetpass">Registration?</a>
+                    <a routerLink="/forgotpassword" class="forgetpass">Forget Password?</a>
+
+
+                </div>
+                <div *ngIf="invalidLogin" class="error">
+                    <div class="text-danger">Invalid credentials.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br><br>
+<br>
+<br>
+<br><br>
+<br><br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br><br>
+<br><br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

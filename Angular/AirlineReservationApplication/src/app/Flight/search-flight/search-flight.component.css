@@ -1,0 +1,10 @@
+.table {
+  margin: 50px 50px 50px 130px;
+  width: 120%;
+  font-family: serif;
+  font-style: garamond;
+}
+.table,th,td{
+  border: 2px solid #6db0b7;
+  border-collapse: collapse;
+}

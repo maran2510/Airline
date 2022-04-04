@@ -1,0 +1,73 @@
+<h1 style="color:darkorchid">oneway Trip</h1>
+<table class="table table-light table-striped">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col">Flight Number</th>
+      <th scope="col">Flight Name</th>
+      <th scope="col">Origin</th>
+      <th scope="col">Destination</th>
+      <th scope="col">Departure Date&Time</th>
+      <th scope="col">Arrival Date&Time</th>
+      <th scope="col">Return Date</th>
+      <th scope="col">Action</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of flightList;">              
+      <td> {{f.flightNumber}} </td>
+      <td> {{f.flightName}} </td>
+      <td> {{f.origin}} </td>
+      <td> {{f.destination}} </td>
+      <td> {{f.departureDate}} </td>
+      <td> {{f.arrivalDate}} </td>
+      <td> {{f.returnDate}} </td>
+      <td> <div class="nav-item" style="margin-left: 15px;">
+          <a routerLink="/select-seat" class="btn btn-primary " role="button" routerLinkActive="active">Book Flights</a>
+        </div>  
+      
+      </td>
+  </tr>  
+  </tbody>
+</table>
+
+<br>
+<br>
+<br>
+ <h1 style="color:darkorchid;">Round Trip</h1>
+
+ <table class="table table-light table-striped">
+  <thead>
+    <tr class="table-primary">
+      <th scope="col">Flight Number</th>
+      <th scope="col">Flight Name</th>
+      <th scope="col">Origin</th>
+      <th scope="col">Destination</th>
+    
+      <th scope="col">Return Date</th>
+      
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let f of flightList;">              
+      <td> {{f.flightNumber}} </td>
+      <td> {{f.flightName}} </td>
+      <td> {{f.destination}} </td>
+      <td> {{f.origin}} </td>
+      <td> {{f.returnDate}} </td>
+    
+  </tr>  
+  </tbody>
+</table>
+
+
+  
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

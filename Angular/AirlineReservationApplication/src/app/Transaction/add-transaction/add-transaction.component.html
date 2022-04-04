@@ -1,0 +1,98 @@
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()" style="margin-top: -14%;">
+
+    <div class="wrapper">
+        <div class="row">
+            <div class="card col-sm-12 offset-md-3 shadow-lg p-3 mb-5 bg-white">
+                <h3 style="margin-top: 20px;">Booking</h3>
+                <div class="row">
+                    <div class="col-12 col-sm-6">
+
+                        <div class="form-group">
+                            <label for="passangerId"></label>
+                            <input formControlName="passangerId" placeholder="passangerName" name="passangerId" class="form-control" id="passangerId">
+                            <div *ngIf="submitted && addForm.controls.passangerId.errors" class="error">
+                                <div class="text-danger" *ngIf="addForm.controls.passangerId.errors.required">Passanger Name is required</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="flightNo"></label>
+                            <input formControlName="flightNo" placeholder="PhoneNumber" name="flightNo" class="form-control" id="flightNo">
+                            <div *ngIf="submitted && addForm.controls.flightNo.errors" class="error">
+                                <div class="text-danger" *ngIf="addForm.controls.flightNo.errors.required">Flight No is required</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="bookingDate"></label>
+                            <input type="Date" formControlName="bookingDate" placeholder="bookingDate" name="bookingDate" class="form-control" id="bookingDate">
+                            <div *ngIf="submitted && addForm.controls.bookingDate.errors" class="error">
+                                <div class="text-danger" *ngIf="addForm.controls.bookingDate.errors.required">Booking Date is required</div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <label for="cityId"></label>
+                            <input formControlName="cityId" placeholder="cityId" name="cityId" class="form-control" id="cityId">
+                            <div *ngIf="submitted && addForm.controls.cityId.errors" class="error">
+                                <div class="text-danger" *ngIf="addForm.controls.cityId.errors.required">City Id is required</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="form-group">
+                            <label for="seatNo"></label>
+                            <input formControlName="seatNo" placeholder="seatNo" name="seatNo" class="form-control" id="seatNo">
+                            <div *ngIf="submitted && addForm.controls.seatNo.errors" class="error">
+                                <div class="text-danger" *ngIf="addForm.controls.seatNo.errors.required">Seat No is required</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tfair"></label>
+                            <input formControlName="tfair" placeholder="tfair" name="tfair" class="form-control" id="tfair">
+                            <div *ngIf="submitted && addForm.controls.tfair.errors" class="error">
+                                <div class="text-danger" *ngIf="addForm.controls.tfair.errors.required">Total Fair is required</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pstatus"></label>
+                            <input formControlName="pstatus" placeholder="pstatus" name="pstatus" class="form-control" id="pstatus">
+                            <div *ngIf="submitted && addForm.controls.pstatus.errors" class="error">
+                                <div class="text-danger" *ngIf="addForm.controls.pstatus.errors.required">Transaction Type is required</div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group" style="margin-top: 0%;">
+                            <label>Covid Certificate</label>
+                            <input class="form-control" type="file" (change)="onChange($event)">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button (click)="submitted" class="btn btn-success">
+                        Submit
+                    </button>
+                    </div>
+
+                    <!--Flag variable is used here-->
+                    <div class="container" *ngIf="loading">
+                        <h3>Loading ...</h3>
+                    </div>
+
+
+                    <div class="row">
+                        <button class="btn btn-primary" style="margin-top: -3%;">Save</button></div>
+                    <div class="row">
+                        <button class="btn btn btn-danger" type="reset" style="margin-top: -3%;">Cancel</button>
+                    </div>
+
+                    <br/><br/>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

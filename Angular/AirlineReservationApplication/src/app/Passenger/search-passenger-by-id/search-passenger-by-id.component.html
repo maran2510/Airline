@@ -1,0 +1,51 @@
+<div class="main-search-input-wrap">
+    <div class="main-search-input fl-wrap">
+        <div class="main-search-input-item"> <input type="text" [(ngModel)]="passId" value="" placeholder="Search Here..."> </div>
+        <button (click)="onSearch()" class="main-search-button">Search</button>
+        <div *ngIf="notFound">Passanger not found</div>
+    </div>
+  </div> 
+<table class="table table-light table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Passenger Id</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Email</th>
+            <th scope="col">Password</th>
+            <th scope="col">Date-of-Birth</th>
+            <th scope="col">Phone Number</th>
+          </tr>
+    </thead>
+    <tbody>
+        <tr>            
+            <td> {{PassObj.passId}} </td>
+            <td> {{PassObj.fName}} </td>
+            <td> {{PassObj.lName}} </td> 
+            <td>{{PassObj.gender}}</td>
+            <td>{{PassObj.email}}</td>
+            <td>{{PassObj.password}}</td>
+            <td>{{PassObj.doB}}</td>
+            <td>{{PassObj.phoneNum}}</td>                      
+        </tr>
+    </tbody>
+  </table>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

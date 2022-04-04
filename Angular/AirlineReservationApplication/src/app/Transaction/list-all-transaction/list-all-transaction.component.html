@@ -1,0 +1,26 @@
+<table class="table table-light table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Transaction Id</th>
+        <th scope="col">Passenger Id</th>
+        <th scope="col">Flight Number</th>
+        <th scope="col">Booking Date</th>
+        <th scope="col">City Code</th>
+        <th scope="col">Seat Number</th>
+        <th scope="col">Total Fair</th>
+        <th scope="col">Payment Status</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let t of traList;">              
+            <td>{{t.trId}}</td>
+            <td>{{t.passangerId}}</td>
+            <td>{{t.flightNo}}</td>
+            <td>{{t.bookingDate}}</td>
+            <td>{{t.cityId}}</td>
+            <td>{{t.seatNo}}</td>
+            <td>{{t.tfair}}</td>
+            <td>{{t.pstatus}}</td>                        
+        </tr>
+    </tbody>
+  </table>

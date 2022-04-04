@@ -1,0 +1,52 @@
+<div class="main-search-input-wrap">
+    <div class="main-search-input fl-wrap">
+        <div class="main-search-input-item"> <input type="text" [(ngModel)]="TrId" value="" placeholder="Search Here..."> </div>
+        <button (click)="onSearch()" class="main-search-button">Search</button>
+        <div *ngIf="notFound">Transaction not found</div>
+    </div>
+  </div> 
+                              
+  <table class="table table-light table-striped">
+      <thead>
+          <tr>
+              <th scope="col">Transaction Id</th>
+              <th scope="col">Passenger Id</th>
+              <th scope="col">Flight Number</th>
+              <th scope="col">Booking Date</th>
+              <th scope="col">City Code</th>
+              <th scope="col">Seat Number</th>
+              <th scope="col">Total Fair</th>
+              <th scope="col">Payment Status</th>
+            </tr>
+      </thead>
+      <tbody>
+          <tr>              
+              <td>{{traObj.trId}}</td>
+              <td>{{traObj.passangerId}}</td>
+              <td>{{traObj.flightNo}}</td>
+              <td>{{traObj.bookingDate}}</td>
+              <td>{{traObj.cityId}}</td>
+              <td>{{traObj.seatNo}}</td>
+              <td>{{traObj.tfair}}</td>
+              <td>{{traObj.pstatus}}</td>                      
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

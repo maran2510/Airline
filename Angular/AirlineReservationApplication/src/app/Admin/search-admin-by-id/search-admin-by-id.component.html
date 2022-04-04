@@ -1,0 +1,39 @@
+<div class="main-search-input-wrap">
+    <div class="main-search-input fl-wrap">
+        <div class="main-search-input-item"> <input type="text" [(ngModel)]="adminNo" value="" placeholder="Search Here..."> </div>
+        <button (click)="onSearch()" class="main-search-button">Search</button>
+        <div *ngIf="notFound">Admin not found</div>
+    </div>
+  </div> 
+  <table class="table table-light table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Admin Id</th>
+          <th scope="col">Username</th>
+          <th scope="col">Password</th>
+          <th scope="col">Admin Name</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>              
+              <td> {{adminObj.adminId}} </td>
+              <td> {{adminObj.loginId}} </td>
+              <td> {{adminObj.password}} </td>
+              <td> {{adminObj.adminName}} </td>
+              </tr>
+      </tbody>
+    </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

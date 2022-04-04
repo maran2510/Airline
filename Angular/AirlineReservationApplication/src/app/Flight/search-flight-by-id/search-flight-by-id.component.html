@@ -1,0 +1,48 @@
+<div class="main-search-input-wrap">
+    <div class="main-search-input fl-wrap">
+        <div class="main-search-input-item"> <input type="text" [(ngModel)]="flightNumber" value=""  placeholder="Search Here..."> </div>
+        <button (click)="onSearch()" class="main-search-button">Search</button>
+        <div *ngIf="notFound">Flight not found</div>
+    </div>
+  </div> 
+  <table class="table table-light table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Flight Number</th>
+          <th scope="col">Flight Name</th>
+          <th scope="col">Origin</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Departure Date&Time</th>
+          <th scope="col">Arrival Date&Time</th>
+          <th scope="col">Return Date</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr>              
+              <td> {{flightObj.flightNumber}} </td>
+              <td> {{flightObj.flightName}} </td>
+              <td> {{flightObj.origin}} </td>
+              <td>{{flightObj.destination}}</td>
+              <td>{{flightObj.departureDate}}</td>
+              <td>{{flightObj.arrivalDate}}</td>
+              <td>{{flightObj.returnDate}}</td>                      
+          </tr>
+      </tbody>
+    </table>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>

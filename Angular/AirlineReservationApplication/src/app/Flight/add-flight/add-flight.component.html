@@ -1,0 +1,68 @@
+
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()" style="margin-top: 15px;">
+<div class="wrapper">
+    <div class="row">
+        <div class="card col-sm-12 offset-md-3 shadow-lg p-3 mb-5 bg-white">
+            <h3 style="margin-top: 20px;">Add Flight</h3>
+            <div class="row">
+
+       
+      
+       <!-- <div class="form-group">
+            <label for="flightNumber">Flight Number</label>
+            <input type="text" class="form-control" id="flightNumber" required [(ngModel)]="flightNumber" formControlName="flightNumber">
+        </div> -->
+
+        <div class="col-12 col-sm-6" >
+        <div class="form-group">
+            <label for="flightName"></label>
+            <input type="text" class="form-control" id="flightName" placeholder="Flight Name" required [(ngModel)]="flightName" formControlName="flightName">
+
+        </div>
+        <div class="form-group">
+            <label for="origin"></label>
+            <input type="text" class="form-control" id="origin" placeholder="Origin" required [(ngModel)]="origin" formControlName="origin">
+        </div>
+        <div class="form-group">
+            <label for="destination"></label>
+            <input type="text" class="form-control" id="destination" placeholder="Destination" required [(ngModel)]="destination" formControlName="destination">
+        </div>
+    </div>
+    
+    <div class="col-12 col-sm-6" >
+        <div class="form-group">
+            <label for="departureDate"></label>
+            <input type="datetime-local" class="form-control" id="departureDate" placeholder="Departure Date" required [(ngModel)]="departureDate" formControlName="departureDate">
+        </div>
+        <div class="form-group">
+            <label for="arrivalDate"></label>
+            <input type="datetime-local" class="form-control" id="arrivalDate" placeholder="Arrival Date" required [(ngModel)]="arrivalDate" formControlName="arrivalDate">
+        </div>
+        <div class="form-group">
+            <label for="returnDate"></label>
+            <input type="datetime-local" class="form-control" id="returnDate" placeholder="Return Date" required [(ngModel)]="returnDate" formControlName="returnDate">
+            
+        </div>
+    </div>
+        <br>
+        
+        
+        
+         <form [formGroup]="adminForm" (ngSubmit)="onSubmit()" style="align-items: center;" >
+        <label for="adminNumber">AdminNo: </label>
+        <select formControlName="adminNumber"  (change)="selectAdmin($event)" >
+           <option name="adminNumber"  value="0"  >--All--</option>
+           <option *ngFor="let a of adminList" value={{a.adminId}}>
+               {{a.adminId}}
+           </option> 
+      </select>
+      <br>
+      <br>
+    <button type="submit" class="logInBtn btn btn-primary">Submit</button>
+      </form>
+    </div>
+</div>
+</div>
+</div>
+</form>
+

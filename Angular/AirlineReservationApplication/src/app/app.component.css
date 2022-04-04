@@ -1,0 +1,132 @@
+.image{
+  height:45em; background-size:cover; width:auto;
+  background-image:url('trial3.jpg');
+  background-position:50% 50%;
+  height: 76%; 
+}
+.image{
+  opacity: 0.9;
+}
+p.normal
+{
+  font-weight: normal;
+}
+.navbar-header
+{
+  text-align: left;
+}
+#aboutus{
+  position: absolute;
+  right: 100px;
+}
+
+.footer{
+  background-image: linear-gradient(15deg, #00000025 0%, #00000025 100%);
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+a {
+  cursor: pointer;
+  color: white;
+  font-weight: 700;
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.navbar-brand{
+  font-weight: 700;
+  color: blue;
+}
+.logInBtn{
+  font-weight: 700;
+  margin-right: 15px;
+  border-radius: 0;
+}
+#navbarSupportedContent{
+  position: absolute;
+  right: 0;
+}
+.btn{
+  border-radius: 0;
+  margin-right: 20px;
+}
+.navbar{
+  background-image: linear-gradient(15deg, #00000025 0%, #00000025 100%);
+}
+
+footer-section-bottom {
+  background: peachpuff;
+ 
+}
+
+.footer-title span::before {
+  content: "";
+  position: absolute;
+
+  right: 0px;
+  bottom: 0px;
+  width: 0px;
+  height: 2px;
+  background-color: #7476e7;
+}
+
+.footer h3 {
+position: relative;
+margin-bottom: 20px;
+padding-bottom: 10px;
+font-size: 20px;
+font-weight: 600;
+color: #7476e7;
+}
+
+.footer h3::after {
+position: absolute;
+content: "";
+width: 60px;
+height: 2px;
+left: 0;
+bottom: 0;
+background:  #f7bb07 ;
+}
+
+.footer-section {
+background: #82b74b;
+padding-bottom: 40px;
+
+}
+
+.footer-section-row {
+background: #82b74b;
+
+margin-bottom: 50px;
+box-shadow: 0px 0px 10px  rgba(0, 0, 0, .5);
+}
+
+.address {
+padding: 10px;
+display: flex;
+}
+.logo {
+  height: 50px;
+  width: 60px;
+}
+
+.topnav-right {
+  float: right;
+}
+
+.myfooter {
+  position: relative;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #6db0b7;
+  color: black;
+  text-align: center;
+}

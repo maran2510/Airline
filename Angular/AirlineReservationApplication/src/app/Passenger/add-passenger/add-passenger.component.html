@@ -1,0 +1,138 @@
+<form [formGroup]="addForm" (ngSubmit)="onSubmit()" style="margin-top: -15%;">
+  <div class="wrapper">
+     <div class="row">
+        <div class="card col-sm-12 offset-md-3 shadow-lg p-3 mb-5 bg-white ">
+           <h3 style="margin-top: 5px;">Registration Page</h3>
+            <div class="row">
+              <div class="col-12 col-sm-6" >
+
+                <div class="form-group">
+                  <div class="dropdown">
+                      <label>Title</label>
+                         <select type="text" class="form-control"  id="Title" name="Title" [ngModelOptions]="{standalone: true}" [(ngModel)]="title" [ngModelOptions]="{standalone: true}" #from="ngModel"  placeholder="title" required>
+                          <option value="Mr"> Mr</option>
+                          <option value="Mrs">Mrs</option>
+                          <option value="Ms">Ms</option>
+                        </select>
+                        
+                  </div>
+                  </div>
+
+
+                <div class="form-group">
+                   <label for="fName"></label>
+                    <input formControlName="fName" placeholder="FirstName Name" name="fName"   class="form-control" id="fName">
+                    <div *ngIf="submitted && addForm.controls.fName.errors" class="error">
+                      <div class="text-danger" *ngIf="addForm.controls.fName.errors.required">FirstName is required</div>
+                    </div>
+                </div>
+
+                 <div class="form-group">
+                    <label for="lName"></label>
+                    <input type="lName" formControlName="lName" placeholder="Last Name" name="lName"  class="form-control" id="lName">
+                    <div *ngIf="submitted && addForm.controls.lName.errors" class="error">
+                      <div class="text-danger" *ngIf="addForm.controls.lName.errors.required">LastName is required</div>
+                    </div>
+                   </div>
+
+                   <div class="form-group">
+                    <div class="dropdown">
+                      <label></label>
+                         <select type="text" class="form-control"  id="gender" name="gender" [ngModelOptions]="{standalone: true}" [(ngModel)]="gender" #from="ngModel" placeholder="Gender" required>
+                          <option value="M">M</option>
+                          <option value="F">F</option>
+                          <option value="O">O</option>
+                        </select>
+                        </div>
+                     </div>     
+      
+                      
+                    </div>
+
+                    <div class="col-12 col-sm-6" >
+                     
+                      <div class="form-group">
+                        <label for="email"></label>
+                         <input formControlName="email" placeholder="EX : Email@gmail.com" name="email" class="form-control" id="email"> 
+                         <div *ngIf="submitted && addForm.controls.email.errors" class="error">
+                          <div class="text-danger" *ngIf="addForm.controls.email.errors.required">Email is required</div>
+                        </div> 
+                      </div>
+
+                         <div class="form-group">
+                                 <label for="password"></label>
+                               <input formControlName="password" placeholder="password" name="password" class="form-control" id="password">
+                               <div *ngIf="submitted && addForm.controls.password.errors" class="error">
+                                <div class="text-danger" *ngIf="addForm.controls.password.errors.required">Password is required</div>
+                              </div>
+
+                          </div>
+
+                          <div class="form-group">
+                                  <label for="doB"></label>
+                                   <input type="date"   formControlName="doB" placeholder="Date of Birth" name="doB" class="form-control" id="doB">
+                                   <div *ngIf="submitted && addForm.controls.doB.errors" class="error">
+                                    <div class="text-danger" *ngIf="addForm.controls.doB.errors.required">DateOfBirth is required</div>
+                                  </div>                  
+                           </div>
+
+                           <div class="form-group">
+                                  <label for="phoneNum"></label>
+                                  <input formControlName="phoneNum" placeholder="phone Number" name="phoneNum" class="form-control" id="phoneNum">
+                                  <div *ngIf="submitted && addForm.controls.phoneNum.errors" class="error">
+                                    <div class="text-danger" *ngIf="addForm.controls.phoneNum.errors.required">PhoneNumber is required</div>
+                                  </div>
+ 
+                             </div>
+                             
+            </div>
+          </div>
+                            <div class="form-group" style="margin-left:28%; margin-top: 2%;" >
+                                   <ngx-recaptcha2 #captchaElem
+                                   [siteKey]="siteKey"
+
+                                 formControlName="recaptcha">
+                                 </ngx-recaptcha2>
+                             </div>
+                            <br>
+
+                            <div class="form-group" style="margin-top: 1%;">
+                              <input class="form-control" type="file" 
+                                      (change)="onChange($event)">
+                                      </div>
+                            
+                            <div class="row">
+                              <button (click)="onUpload()" 
+                                  class="btn btn-success">
+                                  Upload
+                              </button>
+                          </div>
+                          
+                        
+                          <!-- Shareable short link of  uoloaded file -->
+                          <div class="container text-center jumbotron"
+                              *ngIf="shortLink">
+                              <h4> Uploaded Succesfully. Visit Here: </h4>
+                              <a style="color: blue;" href="{{shortLink}}">{{shortLink}}</a>
+                          </div>
+                            
+                          <!--Flag variable is used here-->
+                          <div class="container" *ngIf="loading">
+                              <h3>Loading ...</h3>
+                          </div>
+                          
+          
+
+                              <div class="row">
+                                  <button class="btn btn-primary" style=" margin-top: -3%;">Save</button>
+                              </div>
+                           <div class="row" style="margin-top: -3%;">
+                             <button class="btn btn-danger"  type="reset">Cancel</button>
+                          </div> 
+                            <br/><br/>
+
+                   </div>
+               </div>
+              </div>
+   
+</form>

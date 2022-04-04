@@ -1,0 +1,40 @@
+<div class="main-search-input-wrap">
+    <div class="main-search-input fl-wrap">
+        <div class="main-search-input-item"> <input type="text" [(ngModel)]="seatNo" value="" placeholder="Search Here..."> </div>
+        <button (click)="onSearch()" class="main-search-button">Search</button>
+        <div *ngIf="notFound">Seat not found</div>
+    </div>
+  </div> 
+<table class="table table-light table-striped">
+    <thead>
+        <tr>
+            <th>Seat Number</th>
+            <th>Flight Number</th>
+            <th>Seat Type</th>
+            <th>Seat Cost</th>        
+        </tr>
+    </thead>
+    <tbody>
+        <tr>              
+            <td> {{seatObj.seatNumber}} </td>
+            <td> {{seatObj.flightNumber}} </td>
+            <td> {{seatObj.seatType}} </td>
+            <td>{{seatObj.seatCost}}</td>            
+        </tr>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <br>
+  
+<br>
+<br><br><br>
+<br><br>
